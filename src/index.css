@@ -1,5 +1,7 @@
 * html {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -20,11 +22,33 @@ code {
 
 ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
-li {
-  margin: 0;
-  padding: 0;
+button,
+input {
+  font-size: 1rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(212, 212, 212, 0.505);
+}
+
+button {
+  background: rgb(230, 230, 230);
+  cursor: pointer;
+  /* border-radius: 0.2rem; */
+}
+
+button:hover {
+  background: rgb(204, 204, 204);
+}
+
+input {
+  outline: 0;
+  background: rgb(238, 238, 238);
+  padding-left: 1rem;
+  /* border-radius: 0.2rem; */
+}
+
+input:hover,
+input:focus {
+  background: rgb(230, 230, 230);
 }
