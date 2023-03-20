@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { useAppSelector, useAppDispatch } from "../../app/hooks";
+import { useAppSelector, useAppDispatch } from "../../state/hooks";
 import {
   decrement,
   increment,
@@ -52,7 +52,9 @@ export function Counter() {
           onClick={() => dispatch(incrementAsync(incrementValue))}>
           Add Async
         </button>
-        <button className={styles.button} onClick={() => dispatch(incrementIfOdd(incrementValue))}>
+        <button
+          className={styles.button}
+          onClick={() => dispatch(incrementIfOdd(incrementValue))}>
           Add If Odd
         </button>
       </div>
