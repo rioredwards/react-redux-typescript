@@ -9,7 +9,6 @@ function renderBody(
   expanded: boolean,
   descriptionIsLong: boolean
 ) {
-  console.log("expanded", expanded);
   if (!descriptionIsLong || !expanded) {
     return (
       <p className="description">{description.slice(0, LONG_DESCRIPTION)}</p>
@@ -26,7 +25,6 @@ const Repository: React.FC<Repo> = ({ name, description, link }) => {
 
   function handleToggleExpand() {
     setExpanded(!expanded);
-    console.log(expanded);
   }
 
   const bodyContent = renderBody(description, expanded, descriptionIsLong);
