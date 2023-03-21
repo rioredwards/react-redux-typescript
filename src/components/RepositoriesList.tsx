@@ -25,8 +25,10 @@ const RepositoriesList: React.FC = () => {
       {loading && <h3>Loading...</h3>}
       {!error && !loading && (
         <ul>
-          {data.map((name) => (
-            <li key={name}>{name}</li>
+          {data.map((repo) => (
+            <li key={repo.name}>
+              <a href={repo.link}>{repo.name}</a>
+            </li>
           ))}
         </ul>
       )}

@@ -1,11 +1,6 @@
-import { ActionType } from "../action-types/index";
-import { Action } from "../actions/index";
-
-interface RepositoryState {
-  loading: boolean;
-  error: string | null;
-  data: string[];
-}
+import { ActionType } from "../types/repositories.types";
+import { Action } from "../types/repositories.types";
+import { RepositoryState } from "../types/repositories.types";
 
 const initialState = {
   loading: false,
