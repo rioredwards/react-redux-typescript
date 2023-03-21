@@ -1,0 +1,45 @@
+.repository {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 0 1rem 0;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #3e3e3e;
+}
+
+.repository:hover {
+  background-color: #f6f8fa;
+}
+
+.name,
+.separator,
+.description {
+  margin: 0.7rem;
+}
+
+.name {
+  /* Don't break words */
+  white-space: nowrap;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.expand-btn {
+  font-size: 1.3rem;
+  color: rgb(138, 138, 235);
+  margin: 0.2rem 0 1rem auto;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.expand-btn:hover {
+  background-color: transparent;
+  color: rgb(115, 115, 235);
+}
+
+.expanded {
+  transform: rotate(90deg);
+}
