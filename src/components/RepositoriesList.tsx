@@ -2,6 +2,7 @@ import "./RepositoriesList.css";
 import { useState } from "react";
 import { useActions } from "../hooks/useActions";
 import { useTypedSelector } from "../hooks/useTypedSelector";
+import Repository from "./Repository";
 
 const RepositoriesList: React.FC = () => {
   const [term, setTerm] = useState("");
@@ -25,10 +26,13 @@ const RepositoriesList: React.FC = () => {
       {loading && <h3>Loading...</h3>}
       {!error && !loading && (
         <ul>
-          {data.map((repo) => (
-            <li key={repo.name}>
-              <a href={repo.link}>{repo.name}</a>
-            </li>
+          {data.map((repo, idx) => (
+            <Repository
+              key={idx}
+              name={repo.name}
+              link={repo.link}
+              description={repo.description}
+            />
           ))}
         </ul>
       )}

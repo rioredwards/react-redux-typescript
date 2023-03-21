@@ -1,6 +1,7 @@
 export interface Repo {
   name: string;
   link: string;
+  description: string;
 }
 
 export interface RepositoryState {

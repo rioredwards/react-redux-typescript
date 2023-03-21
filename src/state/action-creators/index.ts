@@ -20,9 +20,11 @@ export const searchRepositories = (term: string) => {
       );
 
       const repos: Repo[] = data.objects.map((result: any) => {
-        const repo = {
+        console.log(result);
+        const repo: Repo = {
           name: result.package.name,
           link: result.package.links.npm,
+          description: result.package.description,
         };
         return repo;
       });
